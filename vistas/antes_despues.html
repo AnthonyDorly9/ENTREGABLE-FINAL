@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block titulo %}Antes y después{% endblock %}
+
+{% block contenido %}
+<header class="encabezado-pagina">
+  <h1 style="font-size: clamp(2.1rem, 4.6vw, 3.5rem)">Antes y después</h1>
+  <p>Compara dos versiones de los modelos con la misma tanda de fotos. Verde: lo que se arregló. Rojo: lo que empeoró. Gris: igual que antes y bien. Rojo punteado: igual que antes y todavía mal.</p>
+</header>
+
+<div class="tarjeta barra-controles barra-compacta" id="controles-comparar">
+  <label class="campo-select solo-comparar">Tanda de fotos<select id="lote"></select></label>
+  <label class="campo-select solo-comparar">Antes<select id="version-antes"></select></label>
+  <label class="campo-select solo-comparar">Después<select id="version-despues"></select></label>
+  <button class="boton boton-primario solo-comparar" type="button" id="comparar">Comparar</button>
+  <button class="boton boton-basura" type="button" id="abrir-basura-lotes" aria-expanded="false" aria-controls="panel-basura-lotes">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v6M14 11v6"/></svg>
+    Basura <span class="contador-basura" id="contador-basura-lotes" hidden></span>
+  </button>
+</div>
+
+<section class="tarjeta" id="panel-basura-lotes" hidden aria-labelledby="t-basura-lotes">
+  <div class="seccion-titulo">
+    <h2 id="t-basura-lotes">Basura de tandas de fotos</h2>
+    <p>Marca las tandas antiguas que ya no necesitas. Desaparecen de las listas y sus dígitos dejan de usarse como memoria al corregir, pero puedes <strong>restaurarlas</strong> cuando quieras.</p>
+  </div>
+  <div class="dos-columnas">
+    <div>
+      <h3 style="margin-bottom: 10px">Tandas que tienes</h3>
+      <ul class="lista-versiones lista-compacta" id="lista-lotes-quitar"></ul>
+      <div class="acciones" style="margin-top: 14px">
+        <button class="boton boton-peligro" type="button" id="quitar-lotes" disabled>Mandar a la basura</button>
+        <button class="boton" type="button" id="marcar-antiguas">Marcar las antiguas</button>
+        <span class="estado" id="estado-quitar-lotes"></span>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin-bottom: 10px">En la basura</h3>
+      <ul class="lista-versiones" id="lista-basura-lotes"></ul>
+      <p class="vacio" id="basura-lotes-vacia" hidden>La basura está vacía.</p>
+      <div class="acciones" style="margin-top: 14px"><button class="boton" type="button" id="vaciar-basura-lotes" hidden>Vaciar la basura</button></div>
+    </div>
+  </div>
+</section>
+
+<div id="vacio-comparar" class="tarjeta vacio" hidden>
+  <h2 style="font-size: 1.4rem; margin-bottom: 8px">Aún no hay fotos para comparar</h2>
+  <p><a href="/">Sube y lee tus primeras fotos</a>; después de corregir modelos podrás ver aquí qué cambió.</p>
+</div>
+
+<section id="resultado-comparar" hidden aria-labelledby="t-comparacion">
+  <div class="seccion-titulo">
+    <h2 id="t-comparacion">Qué cambió</h2>
+    <p id="resumen-comparar"></p>
+  </div>
+  <div class="tarjeta"><div class="chips" id="cambios-por-modelo"></div></div>
+  <div id="fotos-comparar" style="display: flex; flex-direction: column; gap: 18px; margin-top: 18px"></div>
+</section>
+
+<section class="tarjeta" aria-labelledby="t-versiones">
+  <div class="seccion-titulo">
+    <h2 id="t-versiones">Versiones guardadas</h2>
+    <p>Cada corrección crea una versión nueva y las anteriores se conservan. Puedes volver a una anterior cuando quieras.</p>
+  </div>
+  <figure class="imagen-grafico"><img id="img-versiones" alt="Exactitud en MNIST de cada modelo por versión"><figcaption><a class="descargar" id="dl-versiones" download="progreso_versiones.png">Descargar imagen</a></figcaption></figure>
+  <div class="tabla-desplazable" style="margin-top: 14px"><table class="tabla-informe" id="tabla-versiones"></table></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/antes_despues.js') }}"></script>
+{% endblock %}

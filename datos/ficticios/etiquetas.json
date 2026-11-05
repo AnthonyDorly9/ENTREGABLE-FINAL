@@ -1,0 +1,1706 @@
+{
+ "formularios": {
+  "inscripcion_1.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "076448",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "06",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "205977775",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "1845",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_2.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "234533",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "01",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "775626035",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "7866",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_3.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "878672",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "92",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "395024519",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "0179",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_4.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "423975",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "40",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "255259828",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "7002",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_1.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "747502",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "6408",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "2",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "52694953",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_2.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "267450",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "9048",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "2",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "05900632",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_3.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "231005",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "9143",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "0",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "74438518",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_4.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "658103",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "4616",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "6",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "49769330",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_1.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "98692",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "59024905",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "69",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "355225255",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_2.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "07475",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "52573654",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "14",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "259388441",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_3.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "52797",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "81343586",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "12",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "966157079",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_4.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "19143",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "58304063",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "08",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "735207783",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_5.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "260233",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "97",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "990180119",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "3214",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_6.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "212060",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "20",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "631824696",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "0553",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_7.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "553461",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "84",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "427258488",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "3966",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_8.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "254742",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "84",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "660480056",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "5978",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_9.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "573440",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "92",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "334016025",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "8837",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "inscripcion_10.png": [
+   {
+    "etiqueta": "Código de estudiante",
+    "valor": "035389",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Edad",
+    "valor": "79",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "990722011",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Año de ingreso",
+    "valor": "3819",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_5.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "210942",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "3843",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "4",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "30353600",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_6.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "558740",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "0049",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "3",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "04743748",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_7.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "066579",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "2736",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "6",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "91025641",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_8.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "084113",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "7998",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "4",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "48387737",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_9.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "180586",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "5361",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "5",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "75285959",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "pago_10.png": [
+   {
+    "etiqueta": "N.º de factura",
+    "valor": "233525",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Monto",
+    "valor": "8671",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cuotas",
+    "valor": "1",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Referencia",
+    "valor": "52992086",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_5.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "33627",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "25692164",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "05",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "174680370",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_6.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "41654",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "22714183",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "05",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "498114594",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_7.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "19804",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "44938414",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "73",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "081922730",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_8.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "08634",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "35476416",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "11",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "584228217",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_9.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "51720",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "26883513",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "51",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "427589350",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ],
+  "solicitud_10.png": [
+   {
+    "etiqueta": "N.º de solicitud",
+    "valor": "40732",
+    "caja": [
+     380,
+     200,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Documento de identidad",
+    "valor": "24723321",
+    "caja": [
+     380,
+     330,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Cantidad",
+    "valor": "82",
+    "caja": [
+     380,
+     460,
+     560,
+     90
+    ]
+   },
+   {
+    "etiqueta": "Teléfono",
+    "valor": "094548075",
+    "caja": [
+     380,
+     590,
+     560,
+     90
+    ]
+   }
+  ]
+ },
+ "numeros": {
+  "numero_01.png": "4235",
+  "numero_02.png": "7545",
+  "numero_03.png": "388115",
+  "numero_04.png": "0",
+  "numero_05.png": "0821",
+  "numero_06.png": "54850",
+  "numero_07.png": "8",
+  "numero_08.png": "26512",
+  "numero_09.png": "52653",
+  "numero_10.png": "828794",
+  "numero_11.png": "10",
+  "numero_12.png": "273312",
+  "numero_13.png": "106042",
+  "numero_14.png": "6",
+  "numero_15.png": "07",
+  "numero_16.png": "7",
+  "numero_17.png": "7",
+  "numero_18.png": "715507",
+  "numero_19.png": "389172",
+  "numero_20.png": "630948",
+  "numero_021.png": "438",
+  "numero_022.png": "4754254",
+  "numero_023.png": "00000",
+  "numero_024.png": "2581",
+  "numero_025.png": "3",
+  "numero_026.png": "8985843",
+  "numero_027.png": "32176",
+  "numero_028.png": "2814719",
+  "numero_029.png": "381426",
+  "numero_030.png": "73568",
+  "numero_031.png": "71",
+  "numero_032.png": "281",
+  "numero_033.png": "5380",
+  "numero_034.png": "5",
+  "numero_035.png": "72250",
+  "numero_036.png": "58",
+  "numero_037.png": "154",
+  "numero_038.png": "1",
+  "numero_039.png": "4747",
+  "numero_040.png": "478",
+  "numero_041.png": "245",
+  "numero_042.png": "70473",
+  "numero_043.png": "5477956",
+  "numero_044.png": "638471",
+  "numero_045.png": "6",
+  "numero_046.png": "906",
+  "numero_047.png": "2",
+  "numero_048.png": "3",
+  "numero_049.png": "305349",
+  "numero_050.png": "6718",
+  "numero_051.png": "87199",
+  "numero_052.png": "759656",
+  "numero_053.png": "5",
+  "numero_054.png": "6",
+  "numero_055.png": "576713",
+  "numero_056.png": "940",
+  "numero_057.png": "776",
+  "numero_058.png": "80",
+  "numero_059.png": "8",
+  "numero_060.png": "56489",
+  "numero_061.png": "32176",
+  "numero_062.png": "614103",
+  "numero_063.png": "8176755",
+  "numero_064.png": "9593625",
+  "numero_065.png": "02984",
+  "numero_066.png": "149",
+  "numero_067.png": "538058",
+  "numero_068.png": "7151",
+  "numero_069.png": "952",
+  "numero_070.png": "2537926",
+  "numero_071.png": "155",
+  "numero_072.png": "265",
+  "numero_073.png": "268795",
+  "numero_074.png": "571454",
+  "numero_075.png": "134276",
+  "numero_076.png": "3343",
+  "numero_077.png": "5743291",
+  "numero_078.png": "17",
+  "numero_079.png": "62097",
+  "numero_080.png": "57",
+  "numero_081.png": "73",
+  "numero_082.png": "353",
+  "numero_083.png": "82",
+  "numero_084.png": "93",
+  "numero_085.png": "75",
+  "numero_086.png": "357698",
+  "numero_087.png": "073333",
+  "numero_088.png": "9",
+  "numero_089.png": "47",
+  "numero_090.png": "88",
+  "numero_091.png": "250072",
+  "numero_092.png": "941545",
+  "numero_093.png": "3",
+  "numero_094.png": "985960",
+  "numero_095.png": "734865",
+  "numero_096.png": "32",
+  "numero_097.png": "619487",
+  "numero_098.png": "398",
+  "numero_099.png": "902212",
+  "numero_100.png": "0931",
+  "numero_101.png": "0978",
+  "numero_102.png": "0083",
+  "numero_103.png": "9531595",
+  "numero_104.png": "77241",
+  "numero_105.png": "59",
+  "numero_106.png": "07700",
+  "numero_107.png": "499",
+  "numero_108.png": "460583",
+  "numero_109.png": "0100460",
+  "numero_110.png": "446979",
+  "numero_111.png": "91",
+  "numero_112.png": "52",
+  "numero_113.png": "465962",
+  "numero_114.png": "01",
+  "numero_115.png": "2",
+  "numero_116.png": "3679",
+  "numero_117.png": "9843545",
+  "numero_118.png": "0",
+  "numero_119.png": "73",
+  "numero_120.png": "4432",
+  "numero_121.png": "3314",
+  "numero_122.png": "7121234",
+  "numero_123.png": "16188",
+  "numero_124.png": "78995",
+  "numero_125.png": "40225",
+  "numero_126.png": "527",
+  "numero_127.png": "962",
+  "numero_128.png": "973",
+  "numero_129.png": "6333",
+  "numero_130.png": "3674469",
+  "numero_131.png": "067159",
+  "numero_132.png": "6405",
+  "numero_133.png": "5380",
+  "numero_134.png": "9",
+  "numero_135.png": "3",
+  "numero_136.png": "799",
+  "numero_137.png": "86",
+  "numero_138.png": "9964229",
+  "numero_139.png": "4",
+  "numero_140.png": "0",
+  "numero_141.png": "124",
+  "numero_142.png": "3844967",
+  "numero_143.png": "5774",
+  "numero_144.png": "6703",
+  "numero_145.png": "691",
+  "numero_146.png": "9985226",
+  "numero_147.png": "35",
+  "numero_148.png": "292",
+  "numero_149.png": "94",
+  "numero_150.png": "75927",
+  "numero_151.png": "93",
+  "numero_152.png": "0301470",
+  "numero_153.png": "112",
+  "numero_154.png": "3029",
+  "numero_155.png": "6131842",
+  "numero_156.png": "482",
+  "numero_157.png": "07839",
+  "numero_158.png": "95",
+  "numero_159.png": "9145212",
+  "numero_160.png": "3949765",
+  "numero_161.png": "5488602",
+  "numero_162.png": "400976",
+  "numero_163.png": "779",
+  "numero_164.png": "973",
+  "numero_165.png": "6609867",
+  "numero_166.png": "6",
+  "numero_167.png": "6530",
+  "numero_168.png": "4",
+  "numero_169.png": "1",
+  "numero_170.png": "072",
+  "numero_171.png": "92409",
+  "numero_172.png": "535226",
+  "numero_173.png": "679",
+  "numero_174.png": "463421",
+  "numero_175.png": "2380",
+  "numero_176.png": "8164622",
+  "numero_177.png": "494",
+  "numero_178.png": "9558",
+  "numero_179.png": "3303",
+  "numero_180.png": "50934",
+  "numero_181.png": "3757422",
+  "numero_182.png": "06",
+  "numero_183.png": "150",
+  "numero_184.png": "83929",
+  "numero_185.png": "975",
+  "numero_186.png": "94",
+  "numero_187.png": "343",
+  "numero_188.png": "895573",
+  "numero_189.png": "25112",
+  "numero_190.png": "773909",
+  "numero_191.png": "5875566",
+  "numero_192.png": "9654",
+  "numero_193.png": "6555946",
+  "numero_194.png": "198",
+  "numero_195.png": "05468",
+  "numero_196.png": "7511023",
+  "numero_197.png": "5075",
+  "numero_198.png": "551",
+  "numero_199.png": "556",
+  "numero_200.png": "65",
+  "cuadriculada_001.png": "374",
+  "cuadriculada_002.png": "5957021",
+  "cuadriculada_003.png": "8",
+  "cuadriculada_004.png": "197526",
+  "cuadriculada_005.png": "67299",
+  "cuadriculada_006.png": "313056",
+  "cuadriculada_007.png": "81",
+  "cuadriculada_008.png": "12683",
+  "cuadriculada_009.png": "257025",
+  "cuadriculada_010.png": "27",
+  "cuadriculada_011.png": "16279",
+  "cuadriculada_012.png": "947611",
+  "cuadriculada_013.png": "761829",
+  "cuadriculada_014.png": "9156",
+  "cuadriculada_015.png": "85394",
+  "cuadriculada_016.png": "587",
+  "cuadriculada_017.png": "9354",
+  "cuadriculada_018.png": "03",
+  "cuadriculada_019.png": "8508",
+  "cuadriculada_020.png": "6"
+ },
+ "dificultad": {
+  "inscripcion_5.png": 0.35,
+  "inscripcion_6.png": 0.5,
+  "inscripcion_7.png": 0.65,
+  "inscripcion_8.png": 0.2,
+  "inscripcion_9.png": 0.35,
+  "inscripcion_10.png": 0.5,
+  "pago_5.png": 0.35,
+  "pago_6.png": 0.5,
+  "pago_7.png": 0.65,
+  "pago_8.png": 0.2,
+  "pago_9.png": 0.35,
+  "pago_10.png": 0.5,
+  "solicitud_5.png": 0.35,
+  "solicitud_6.png": 0.5,
+  "solicitud_7.png": 0.65,
+  "solicitud_8.png": 0.2,
+  "solicitud_9.png": 0.35,
+  "solicitud_10.png": 0.5,
+  "numero_021.png": 0.35,
+  "numero_022.png": 0.55,
+  "numero_023.png": 0.8,
+  "numero_024.png": 0.15,
+  "numero_025.png": 0.35,
+  "numero_026.png": 0.55,
+  "numero_027.png": 0.8,
+  "numero_028.png": 0.15,
+  "numero_029.png": 0.35,
+  "numero_030.png": 0.55,
+  "numero_031.png": 0.8,
+  "numero_032.png": 0.15,
+  "numero_033.png": 0.35,
+  "numero_034.png": 0.55,
+  "numero_035.png": 0.8,
+  "numero_036.png": 0.15,
+  "numero_037.png": 0.35,
+  "numero_038.png": 0.55,
+  "numero_039.png": 0.8,
+  "numero_040.png": 0.15,
+  "numero_041.png": 0.35,
+  "numero_042.png": 0.55,
+  "numero_043.png": 0.8,
+  "numero_044.png": 0.15,
+  "numero_045.png": 0.35,
+  "numero_046.png": 0.55,
+  "numero_047.png": 0.8,
+  "numero_048.png": 0.15,
+  "numero_049.png": 0.35,
+  "numero_050.png": 0.55,
+  "numero_051.png": 0.8,
+  "numero_052.png": 0.15,
+  "numero_053.png": 0.35,
+  "numero_054.png": 0.55,
+  "numero_055.png": 0.8,
+  "numero_056.png": 0.15,
+  "numero_057.png": 0.35,
+  "numero_058.png": 0.55,
+  "numero_059.png": 0.8,
+  "numero_060.png": 0.15,
+  "numero_061.png": 0.35,
+  "numero_062.png": 0.55,
+  "numero_063.png": 0.8,
+  "numero_064.png": 0.15,
+  "numero_065.png": 0.35,
+  "numero_066.png": 0.55,
+  "numero_067.png": 0.8,
+  "numero_068.png": 0.15,
+  "numero_069.png": 0.35,
+  "numero_070.png": 0.55,
+  "numero_071.png": 0.8,
+  "numero_072.png": 0.15,
+  "numero_073.png": 0.35,
+  "numero_074.png": 0.55,
+  "numero_075.png": 0.8,
+  "numero_076.png": 0.15,
+  "numero_077.png": 0.35,
+  "numero_078.png": 0.55,
+  "numero_079.png": 0.8,
+  "numero_080.png": 0.15,
+  "numero_081.png": 0.35,
+  "numero_082.png": 0.55,
+  "numero_083.png": 0.8,
+  "numero_084.png": 0.15,
+  "numero_085.png": 0.35,
+  "numero_086.png": 0.55,
+  "numero_087.png": 0.8,
+  "numero_088.png": 0.15,
+  "numero_089.png": 0.35,
+  "numero_090.png": 0.55,
+  "numero_091.png": 0.8,
+  "numero_092.png": 0.15,
+  "numero_093.png": 0.35,
+  "numero_094.png": 0.55,
+  "numero_095.png": 0.8,
+  "numero_096.png": 0.15,
+  "numero_097.png": 0.35,
+  "numero_098.png": 0.55,
+  "numero_099.png": 0.8,
+  "numero_100.png": 0.15,
+  "numero_101.png": 0.35,
+  "numero_102.png": 0.55,
+  "numero_103.png": 0.8,
+  "numero_104.png": 0.15,
+  "numero_105.png": 0.35,
+  "numero_106.png": 0.55,
+  "numero_107.png": 0.8,
+  "numero_108.png": 0.15,
+  "numero_109.png": 0.35,
+  "numero_110.png": 0.55,
+  "numero_111.png": 0.8,
+  "numero_112.png": 0.15,
+  "numero_113.png": 0.35,
+  "numero_114.png": 0.55,
+  "numero_115.png": 0.8,
+  "numero_116.png": 0.15,
+  "numero_117.png": 0.35,
+  "numero_118.png": 0.55,
+  "numero_119.png": 0.8,
+  "numero_120.png": 0.15,
+  "numero_121.png": 0.35,
+  "numero_122.png": 0.55,
+  "numero_123.png": 0.8,
+  "numero_124.png": 0.15,
+  "numero_125.png": 0.35,
+  "numero_126.png": 0.55,
+  "numero_127.png": 0.8,
+  "numero_128.png": 0.15,
+  "numero_129.png": 0.35,
+  "numero_130.png": 0.55,
+  "numero_131.png": 0.8,
+  "numero_132.png": 0.15,
+  "numero_133.png": 0.35,
+  "numero_134.png": 0.55,
+  "numero_135.png": 0.8,
+  "numero_136.png": 0.15,
+  "numero_137.png": 0.35,
+  "numero_138.png": 0.55,
+  "numero_139.png": 0.8,
+  "numero_140.png": 0.15,
+  "numero_141.png": 0.35,
+  "numero_142.png": 0.55,
+  "numero_143.png": 0.8,
+  "numero_144.png": 0.15,
+  "numero_145.png": 0.35,
+  "numero_146.png": 0.55,
+  "numero_147.png": 0.8,
+  "numero_148.png": 0.15,
+  "numero_149.png": 0.35,
+  "numero_150.png": 0.55,
+  "numero_151.png": 0.8,
+  "numero_152.png": 0.15,
+  "numero_153.png": 0.35,
+  "numero_154.png": 0.55,
+  "numero_155.png": 0.8,
+  "numero_156.png": 0.15,
+  "numero_157.png": 0.35,
+  "numero_158.png": 0.55,
+  "numero_159.png": 0.8,
+  "numero_160.png": 0.15,
+  "numero_161.png": 0.35,
+  "numero_162.png": 0.55,
+  "numero_163.png": 0.8,
+  "numero_164.png": 0.15,
+  "numero_165.png": 0.35,
+  "numero_166.png": 0.55,
+  "numero_167.png": 0.8,
+  "numero_168.png": 0.15,
+  "numero_169.png": 0.35,
+  "numero_170.png": 0.55,
+  "numero_171.png": 0.8,
+  "numero_172.png": 0.15,
+  "numero_173.png": 0.35,
+  "numero_174.png": 0.55,
+  "numero_175.png": 0.8,
+  "numero_176.png": 0.15,
+  "numero_177.png": 0.35,
+  "numero_178.png": 0.55,
+  "numero_179.png": 0.8,
+  "numero_180.png": 0.15,
+  "numero_181.png": 0.35,
+  "numero_182.png": 0.55,
+  "numero_183.png": 0.8,
+  "numero_184.png": 0.15,
+  "numero_185.png": 0.35,
+  "numero_186.png": 0.55,
+  "numero_187.png": 0.8,
+  "numero_188.png": 0.15,
+  "numero_189.png": 0.35,
+  "numero_190.png": 0.55,
+  "numero_191.png": 0.8,
+  "numero_192.png": 0.15,
+  "numero_193.png": 0.35,
+  "numero_194.png": 0.55,
+  "numero_195.png": 0.8,
+  "numero_196.png": 0.15,
+  "numero_197.png": 0.35,
+  "numero_198.png": 0.55,
+  "numero_199.png": 0.8,
+  "numero_200.png": 0.15,
+  "cuadriculada_001.png": 0.35,
+  "cuadriculada_002.png": 0.55,
+  "cuadriculada_003.png": 0.8,
+  "cuadriculada_004.png": 0.15,
+  "cuadriculada_005.png": 0.35,
+  "cuadriculada_006.png": 0.55,
+  "cuadriculada_007.png": 0.8,
+  "cuadriculada_008.png": 0.15,
+  "cuadriculada_009.png": 0.35,
+  "cuadriculada_010.png": 0.55,
+  "cuadriculada_011.png": 0.8,
+  "cuadriculada_012.png": 0.15,
+  "cuadriculada_013.png": 0.35,
+  "cuadriculada_014.png": 0.55,
+  "cuadriculada_015.png": 0.8,
+  "cuadriculada_016.png": 0.15,
+  "cuadriculada_017.png": 0.35,
+  "cuadriculada_018.png": 0.55,
+  "cuadriculada_019.png": 0.8,
+  "cuadriculada_020.png": 0.15
+ }
+}

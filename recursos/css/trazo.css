@@ -1,0 +1,56 @@
+/* Trazo: tema propio. Se carga después de estilos.css y cambia la paleta, la barra superior y el aspecto de las tarjetas. */
+:root {
+  --acento: #0f766e;
+  --papel: #f2f5f3; --superficie: #ffffff; --superficie-2: #e7efec;
+  --tinta: #10231f; --tinta-suave: #4a6058; --linea: #cddad4;
+  --sombra: 0 1px 2px rgba(16, 35, 31, 0.08), 0 10px 24px -14px rgba(15, 118, 110, 0.35);
+  --violeta: #0f766e; --rosa: #14a394; --verde: #22c55e; --cian: #0ea5e9;
+  --radio: 14px;
+}
+:root[data-tema="oscuro"] {
+  --papel: #0a1412; --superficie: #11201c; --superficie-2: #19302a; --tinta: #e6f3ef; --tinta-suave: #9db8af; --linea: #25403a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    --papel: #0a1412; --superficie: #11201c; --superficie-2: #19302a; --tinta: #e6f3ef; --tinta-suave: #9db8af; --linea: #25403a;
+  }
+}
+body { background-image: none; background-color: var(--papel); overflow-x: hidden; }
+
+/* Barra superior con las secciones a la vista */
+.barra-trazo { gap: 18px; padding: 8px clamp(12px, 2.5vw, 32px); border-bottom: 1px solid var(--linea); flex-wrap: wrap; }
+.barra-trazo .marca-barra { gap: 10px; }
+.marca-textos { display: flex; flex-direction: column; line-height: 1.1; }
+.marca-textos small { font-size: 0.7rem; color: var(--tinta-suave); letter-spacing: 0.02em; }
+.nav-principal { flex: 1 1 380px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.nav-principal::-webkit-scrollbar { display: none; }
+.nav-principal .navegacion { flex-direction: row; gap: 2px; white-space: nowrap; }
+.nav-principal .navegacion a { padding: 8px 8px; border-radius: 10px; font-size: 0.88rem; font-weight: 600; color: var(--tinta-suave); }
+.nav-principal .navegacion a[aria-current="page"] { background: color-mix(in srgb, var(--color) 14%, var(--superficie)); color: var(--color); box-shadow: inset 0 -3px 0 var(--color); border-radius: 10px 10px 4px 4px; }
+:root[data-tema="oscuro"] .nav-principal .navegacion a[aria-current="page"] { color: var(--tinta); }
+.barra-derecha { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.barra-trazo .campana { margin-left: 0; }
+.barra-trazo .insignia-version { padding: 6px 10px; border-radius: 10px; font-size: 0.78rem; gap: 6px; }
+.boton-icono {
+  width: 38px; height: 38px; display: grid; place-items: center; cursor: pointer; border-radius: 10px;
+  border: 1px solid var(--linea); background: var(--superficie); color: var(--tinta); font: inherit; font-size: 1rem;
+}
+.boton-icono:hover { background: var(--superficie-2); }
+#cambiar-tema { width: auto; padding: 0 12px; font-size: 0.8rem; font-weight: 600; }
+#tareas-menu { display: none !important; }
+
+/* Tarjetas y títulos más sobrios */
+.tarjeta { border-top: 1px solid var(--linea); border-radius: var(--radio); }
+.barra-accion { border-top: 1px solid var(--linea); }
+.encabezado-pagina h1 { background: none; font-size: clamp(2rem, 4vw, 3rem) !important; padding: 0 0 0 16px; border-left: 6px solid var(--acento); letter-spacing: -0.025em; }
+.seccion-titulo h2::before, .acordeon-titulo h2::before { transform: none; border-radius: 3px; width: 0.4em; height: 0.4em; }
+.boton { border-radius: 12px; }
+.pie-trazo { padding: 20px clamp(16px, 4vw, 48px) 32px; color: var(--tinta-suave); font-size: 0.82rem; text-align: center; }
+
+/* Página Resumen */
+.resumen-tubo { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; counter-reset: paso; }
+.resumen-tubo li { list-style: none; position: relative; padding: 16px 16px 16px 52px; background: var(--superficie); border: 1px solid var(--linea); border-radius: var(--radio); counter-increment: paso; }
+.resumen-tubo li::before { content: counter(paso); position: absolute; left: 14px; top: 14px; width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; background: var(--acento); color: #fff; font-weight: 800; }
+.resumen-tubo strong { display: block; }
+.resumen-tubo span { color: var(--tinta-suave); font-size: 0.9rem; }
+@media (max-width: 720px) { .barra-derecha { margin-left: 0; } .marca-textos small { display: none; } }

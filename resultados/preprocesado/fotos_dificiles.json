@@ -1,0 +1,140 @@
+{
+ "version": "v1",
+ "casos": [
+  {
+   "caso": "Hoja lisa",
+   "fotos": 40,
+   "cantidad_correcta": 1.0,
+   "numero_exacto": {
+    "cnn": 0.9,
+    "mlp": 0.875,
+    "svm": 0.9,
+    "knn": 0.925,
+    "regresion": 0.825,
+    "regresion_lineal": 0.7,
+    "kmeans": 0.575
+   },
+   "numero_exacto_cnn": 0.9
+  },
+  {
+   "caso": "Casillas de formulario",
+   "fotos": 40,
+   "cantidad_correcta": 1.0,
+   "numero_exacto": {
+    "cnn": 0.925,
+    "mlp": 0.825,
+    "svm": 0.85,
+    "knn": 0.875,
+    "regresion": 0.7,
+    "regresion_lineal": 0.475,
+    "kmeans": 0.45
+   },
+   "numero_exacto_cnn": 0.925
+  },
+  {
+   "caso": "Cuadriculada o rayada (colores al azar)",
+   "fotos": 40,
+   "cantidad_correcta": 1.0,
+   "numero_exacto": {
+    "cnn": 0.975,
+    "mlp": 0.875,
+    "svm": 0.85,
+    "knn": 0.875,
+    "regresion": 0.8,
+    "regresion_lineal": 0.75,
+    "kmeans": 0.525
+   },
+   "numero_exacto_cnn": 0.975
+  },
+  {
+   "caso": "Cuadrícula oscura (negra, azul, café, morada, verde)",
+   "fotos": 40,
+   "cantidad_correcta": 0.975,
+   "numero_exacto": {
+    "cnn": 0.75,
+    "mlp": 0.725,
+    "svm": 0.675,
+    "knn": 0.675,
+    "regresion": 0.575,
+    "regresion_lineal": 0.475,
+    "kmeans": 0.5
+   },
+   "numero_exacto_cnn": 0.75
+  },
+  {
+   "caso": "Tinta de otro color que la cuadrícula",
+   "fotos": 40,
+   "cantidad_correcta": 0.975,
+   "numero_exacto": {
+    "cnn": 0.875,
+    "mlp": 0.85,
+    "svm": 0.85,
+    "knn": 0.825,
+    "regresion": 0.75,
+    "regresion_lineal": 0.55,
+    "kmeans": 0.6
+   },
+   "numero_exacto_cnn": 0.875
+  },
+  {
+   "caso": "Foto grande de celular con cuadrícula",
+   "fotos": 40,
+   "cantidad_correcta": 1.0,
+   "numero_exacto": {
+    "cnn": 0.725,
+    "mlp": 0.65,
+    "svm": 0.7,
+    "knn": 0.7,
+    "regresion": 0.475,
+    "regresion_lineal": 0.475,
+    "kmeans": 0.5
+   },
+   "numero_exacto_cnn": 0.725
+  },
+  {
+   "caso": "Número chico o lejano (12 a 25 px de alto)",
+   "fotos": 40,
+   "cantidad_correcta": 1.0,
+   "numero_exacto": {
+    "cnn": 0.925,
+    "mlp": 0.925,
+    "svm": 0.95,
+    "knn": 0.9,
+    "regresion": 0.775,
+    "regresion_lineal": 0.7,
+    "kmeans": 0.65
+   },
+   "numero_exacto_cnn": 0.925
+  },
+  {
+   "caso": "Foto de lado (girada 90°)",
+   "fotos": 40,
+   "cantidad_correcta": 1.0,
+   "numero_exacto": {
+    "cnn": 0.825,
+    "mlp": 0.8,
+    "svm": 0.825,
+    "knn": 0.8,
+    "regresion": 0.675,
+    "regresion_lineal": 0.5,
+    "kmeans": 0.5
+   },
+   "numero_exacto_cnn": 0.825
+  },
+  {
+   "caso": "Foto de cabeza (girada 180°)",
+   "fotos": 40,
+   "cantidad_correcta": 1.0,
+   "numero_exacto": {
+    "cnn": 0.225,
+    "mlp": 0.175,
+    "svm": 0.225,
+    "knn": 0.225,
+    "regresion": 0.2,
+    "regresion_lineal": 0.15,
+    "kmeans": 0.1
+   },
+   "numero_exacto_cnn": 0.225
+  }
+ ]
+}

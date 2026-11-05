@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+graphify-out/
+contexto/
+
+# Datos de quien usa la app: no se suben
+datos/fotos_usuario/
+datos/base_de_datos/
+datos/copias_seguridad/
+datos/tiempos*.json
+modelos/*
+!modelos/v1/
+resultados/*
+!resultados/v1/
+!resultados/preprocesado/
+*.log

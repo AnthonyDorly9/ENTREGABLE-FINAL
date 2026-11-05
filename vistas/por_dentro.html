@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block titulo %}Por dentro de los modelos{% endblock %}
+
+{% block contenido %}
+<header class="encabezado-pagina">
+  <h1 style="font-size: clamp(2.1rem, 4.6vw, 3.5rem)">Por dentro de los modelos</h1>
+  <p>Una red neuronal es una cadena de operaciones muy simples. Aquí puedes tocar cada pieza: una neurona, un filtro de convolución, la red completa con tu dibujo y el aprendizaje.</p>
+</header>
+
+<section class="tarjeta" aria-labelledby="t-neurona">
+  <div class="seccion-titulo">
+    <h2 id="t-neurona">1. Una neurona</h2>
+    <p>Multiplica cada entrada por su peso, suma todo con un sesgo y pasa el resultado por una función de activación. Mueve los controles y mira el número final.</p>
+  </div>
+  <div class="dos-columnas">
+    <div id="controles-neurona" class="controles-neurona"></div>
+    <div class="cuenta-neurona" aria-live="polite">
+      <p id="formula-neurona" class="formula"></p>
+      <div class="lienzo" style="height: 220px"><canvas id="lienzo-activacion" width="440" height="220" role="img" aria-label="Gráfica de la función de activación con el punto actual"></canvas></div>
+      <div class="segmentos" role="group" aria-label="Función de activación" id="tipo-activacion"></div>
+    </div>
+  </div>
+</section>
+
+<section class="tarjeta" aria-labelledby="t-convolucion">
+  <div class="seccion-titulo">
+    <h2 id="t-convolucion">2. Un filtro de convolución</h2>
+    <p>Una ventana de 3×3 recorre la imagen. En cada posición multiplica y suma. Así una capa convolucional detecta bordes y trazos, sin importar dónde estén.</p>
+  </div>
+  <div class="controles-carrera">
+    <div class="segmentos" role="group" aria-label="Filtro" id="filtros-conv"></div>
+    <button class="boton boton-primario" type="button" id="jugar-conv">Animar</button>
+    <button class="boton" type="button" id="paso-conv">Un paso</button>
+    <button class="boton" type="button" id="reiniciar-conv">Reiniciar</button>
+  </div>
+  <div class="conv">
+    <figure class="figura"><figcaption>Imagen (10×10)</figcaption><div id="conv-entrada" class="rejilla rejilla-entrada"></div></figure>
+    <figure class="figura"><figcaption>Filtro (3×3)</figcaption><div id="conv-filtro" class="rejilla rejilla-filtro"></div></figure>
+    <figure class="figura"><figcaption>Resultado (8×8)</figcaption><div id="conv-salida" class="rejilla rejilla-salida"></div></figure>
+  </div>
+  <p class="formula" id="cuenta-conv" aria-live="polite">Pulsa «Animar» o «Un paso».</p>
+</section>
+
+<section class="tarjeta" aria-labelledby="t-red">
+  <div class="seccion-titulo">
+    <h2 id="t-red">3. La red completa, con tu dibujo</h2>
+    <p>Dibuja un dígito y mira cómo lo ve la CNN, capa por capa, hasta la respuesta final.</p>
+  </div>
+  <div class="reto">
+    <div class="reto-lienzo">
+      <canvas id="lienzo-red" width="280" height="280" role="img" aria-label="Lienzo para dibujar un dígito"></canvas>
+      <div class="acciones">
+        <button class="boton" type="button" id="limpiar-red">Limpiar</button>
+        <button class="boton boton-primario" type="button" id="ver-red">Ver por dentro</button>
+      </div>
+    </div>
+    <div class="reto-resultado" id="capas-red" aria-live="polite"><p class="vacio">Dibuja un dígito para ver sus capas.</p></div>
+  </div>
+</section>
+
+<section class="tarjeta" aria-labelledby="t-aprender">
+  <div class="seccion-titulo">
+    <h2 id="t-aprender">4. Cómo aprende</h2>
+    <p>Aprender es equivocarse un poco menos cada vez. La red repite cuatro pasos miles de veces:</p>
+  </div>
+  <ol class="pasos-aprender">
+    <li><strong>Predecir.</strong> La imagen pasa por las capas (propagación hacia adelante) y sale una respuesta.</li>
+    <li><strong>Medir el error.</strong> La pérdida dice qué tan lejos estuvo de la respuesta correcta.</li>
+    <li><strong>Repartir la culpa.</strong> La retropropagación calcula cuánto contribuyó cada peso al error.</li>
+    <li><strong>Corregir un poco.</strong> Cada peso se mueve en la dirección que baja el error. El tamaño del paso es la tasa de aprendizaje.</li>
+  </ol>
+  <div class="dos-columnas">
+    <div class="ajuste"><label for="tasa-demo">Tasa de aprendizaje</label>
+      <div class="rango-fila"><input type="range" id="tasa-demo" min="0.05" max="3.2" step="0.05" value="0.2"><output for="tasa-demo" id="valor-tasa">0,2</output></div>
+      <div class="acciones"><button class="boton" type="button" id="paso-descenso">Dar un paso</button><button class="boton" type="button" id="reiniciar-descenso">Reiniciar</button></div>
+      <p class="formula" id="texto-descenso" aria-live="polite"></p>
+    </div>
+    <div class="lienzo" style="height: 240px"><canvas id="lienzo-descenso" width="480" height="240" role="img" aria-label="Curva del error con una bola que baja hacia el mínimo"></canvas></div>
+  </div>
+  <p style="color: var(--tinta-suave); margin-top: 12px">Con una tasa pequeña baja despacio; con una muy grande salta de un lado a otro y puede no llegar nunca. En el <a href="/entrenador">Entrenador</a> puedes probarlo con una red de verdad.</p>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/lienzo.js') }}"></script>
+<script src="{{ url_for('static', filename='js/por_dentro.js') }}"></script>
+{% endblock %}

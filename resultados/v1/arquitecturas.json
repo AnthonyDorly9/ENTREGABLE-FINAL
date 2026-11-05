@@ -1,0 +1,153 @@
+{
+ "cnn": {
+  "capas": [
+   {
+    "capa": "Entrada",
+    "forma": "imagen 28x28, 1 canal",
+    "activacion": "-",
+    "parametros": 0
+   },
+   {
+    "capa": "Conv2D 3x3",
+    "forma": "16 filtros, relleno 1 -> 28x28x16",
+    "activacion": "ReLU",
+    "parametros": 160
+   },
+   {
+    "capa": "MaxPool 2x2",
+    "forma": "14x14x16",
+    "activacion": "-",
+    "parametros": 0
+   },
+   {
+    "capa": "Conv2D 3x3",
+    "forma": "32 filtros, relleno 1 -> 14x14x32",
+    "activacion": "ReLU",
+    "parametros": 4640
+   },
+   {
+    "capa": "MaxPool 2x2",
+    "forma": "7x7x32",
+    "activacion": "-",
+    "parametros": 0
+   },
+   {
+    "capa": "Aplanar",
+    "forma": "1568 valores",
+    "activacion": "-",
+    "parametros": 0
+   },
+   {
+    "capa": "Dropout",
+    "forma": "p = 0.25",
+    "activacion": "-",
+    "parametros": 0
+   },
+   {
+    "capa": "Densa",
+    "forma": "64 neuronas",
+    "activacion": "ReLU",
+    "parametros": 100416
+   },
+   {
+    "capa": "Dropout",
+    "forma": "p = 0.25",
+    "activacion": "-",
+    "parametros": 0
+   },
+   {
+    "capa": "Densa (salida)",
+    "forma": "10 neuronas (digitos 0-9)",
+    "activacion": "Softmax",
+    "parametros": 650
+   }
+  ],
+  "parametros_totales": 105866,
+  "optimizador": "Adam",
+  "tasa_aprendizaje": 0.003,
+  "funcion_perdida": "Entropia cruzada"
+ },
+ "mlp": {
+  "capas": [
+   {
+    "capa": "Entrada",
+    "forma": "784 valores (28x28 aplanado)",
+    "activacion": "-",
+    "parametros": 0
+   },
+   {
+    "capa": "Densa",
+    "forma": "128 neuronas",
+    "activacion": "ReLU",
+    "parametros": 100480
+   },
+   {
+    "capa": "Dropout",
+    "forma": "p = 0.2",
+    "activacion": "-",
+    "parametros": 0
+   },
+   {
+    "capa": "Densa",
+    "forma": "64 neuronas",
+    "activacion": "ReLU",
+    "parametros": 8256
+   },
+   {
+    "capa": "Densa (salida)",
+    "forma": "10 neuronas (digitos 0-9)",
+    "activacion": "Softmax",
+    "parametros": 650
+   }
+  ],
+  "parametros_totales": 109386,
+  "optimizador": "Adam",
+  "tasa_aprendizaje": 0.003,
+  "funcion_perdida": "Entropia cruzada"
+ },
+ "svm": {
+  "tipo": "SVM",
+  "parametros": {
+   "nucleo": "RBF",
+   "C": 10,
+   "gamma": 0.05,
+   "componentes PCA": 50
+  },
+  "vectores_soporte": 4791
+ },
+ "knn": {
+  "tipo": "KNN",
+  "parametros": {
+   "vecinos (k)": 7,
+   "ponderacion": "distancia",
+   "componentes PCA": 50
+  },
+  "muestras_memorizadas": 19999
+ },
+ "regresion": {
+  "tipo": "Regresion logistica multinomial",
+  "parametros": {
+   "C (regularizacion)": 0.1,
+   "iteraciones maximas": 200,
+   "solucionador": "lbfgs"
+  },
+  "parametros_totales": 7850
+ },
+ "kmeans": {
+  "tipo": "K-Means (no supervisado) + etiqueta por mayoria",
+  "parametros": {
+   "clusteres": 60,
+   "componentes PCA": 50,
+   "inicializaciones": 3
+  }
+ },
+ "regresion_lineal": {
+  "tipo": "Regresión lineal por mínimos cuadrados (un peso por píxel y por dígito)",
+  "parametros": {
+   "alpha (regularización)": 100.0,
+   "método": "ecuación normal",
+   "salida": "puntaje por dígito; gana el mayor"
+  },
+  "parametros_totales": 7850
+ }
+}

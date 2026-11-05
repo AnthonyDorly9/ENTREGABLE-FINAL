@@ -1,0 +1,38 @@
+{
+ "tsne_mnist": {
+  "archivo": "tsne_mnist.png",
+  "titulo": "T-SNE Embedding of MNIST.png",
+  "autor": "Kyle McDonald",
+  "licencia": "CC BY 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:T-SNE_Embedding_of_MNIST.png"
+ },
+ "formulario_nist": {
+  "archivo": "formulario_nist_digitos.png",
+  "titulo": "NIST SD-19 f1002 33.png",
+  "autor": "NIST",
+  "licencia": "Public domain",
+  "fuente": "https://commons.wikimedia.org/wiki/File:NIST_SD-19_f1002_33.png",
+  "nota": "Recorte de las filas de digitos del formulario original"
+ },
+ "red_neuronal": {
+  "archivo": "red_neuronal.png",
+  "titulo": "Neural networks diagram.png",
+  "autor": "hikari_no_yume",
+  "licencia": "CC BY 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Neural_networks_diagram.png"
+ },
+ "ejemplos_mnist": {
+  "archivo": "ejemplos_mnist.png",
+  "titulo": "MnistExamples.png",
+  "autor": "Josef Steppan",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:MnistExamples.png"
+ },
+ "cuaderno": {
+  "archivo": "cuaderno.png",
+  "titulo": "(Sherwin Carlquist field notebook from 1966 expedition to Hawaii) - DPLA - 6cf6ec33d755d47e91a91bc1a00b7da2 (page 42).jpg",
+  "autor": "Carlquist, Sherwin John, 1930-2021",
+  "licencia": "CC BY 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:(Sherwin_Carlquist_field_notebook_from_1966_expedition_to_Hawaii)_-_DPLA_-_6cf6ec33d755d47e91a91bc1a00b7da2_(page_42).jpg"
+ }
+}

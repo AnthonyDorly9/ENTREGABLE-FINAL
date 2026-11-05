@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block titulo %}Informe del proyecto{% endblock %}
+
+{% block contenido %}
+<header class="encabezado-pagina">
+  <h1 style="font-size: clamp(2.1rem, 4.6vw, 3.5rem)">Informe del proyecto</h1>
+  <p>Arma tu informe a tu gusto: elige la portada, qué secciones incluir y en qué orden, edita los textos y añade tus fotos. El PDF usa los datos reales de la versión que elijas.</p>
+</header>
+
+<section class="tarjeta" aria-labelledby="t-portada">
+  <div class="seccion-titulo">
+    <h2 id="t-portada">Portada</h2>
+    <p>El título y tus datos aparecen en la carátula.</p>
+  </div>
+  <div class="formulario-informe">
+    <label class="campo-texto ancho">Título<textarea id="titulo" rows="2" maxlength="120">Reconocimiento de dígitos manuscritos</textarea></label>
+    <label class="campo-texto ancho">Subtítulo<textarea id="subtitulo" rows="2" maxlength="180">Clasificación automática de formularios escritos a mano · TecnoForms</textarea></label>
+    <label class="campo-texto">Tu nombre<input type="text" id="autor" maxlength="80" placeholder="Nombre y apellido" autocomplete="name"></label>
+    <label class="campo-texto">Curso o materia<input type="text" id="curso" maxlength="100" placeholder="Ej.: Aprendizaje automático"></label>
+  </div>
+  <h3 class="subtitulo-campo" id="etiqueta-imagen">Imagen de la carátula</h3>
+  <p class="pista-texto" style="margin-bottom: 10px">Elige una de las imágenes o sube tu propia foto: pulsa «Subir mi foto» o suéltala sobre esta zona.</p>
+  <div class="zona-portada" id="zona-portada">
+    <div class="opciones-imagen" role="radiogroup" aria-labelledby="etiqueta-imagen" id="portadas"></div>
+  </div>
+  <input type="file" id="archivo-portada" accept="image/*" hidden>
+  <h3 class="subtitulo-campo" id="etiqueta-color">Color</h3>
+  <div class="muestras-color" role="radiogroup" aria-labelledby="etiqueta-color" id="temas"></div>
+</section>
+
+<section class="tarjeta" aria-labelledby="t-contenido">
+  <div class="seccion-titulo">
+    <h2 id="t-contenido">Contenido</h2>
+    <p>Marca las secciones que quieres, cámbialas de orden con los botones y abre «Editar texto» para escribirlo a tu manera.</p>
+  </div>
+  <label class="campo-select" style="margin-bottom: 14px">Versión de los modelos
+    <select id="version"></select>
+  </label>
+  <ol class="lista-secciones" id="secciones"></ol>
+</section>
+
+<section class="tarjeta" aria-labelledby="t-fotos-informe">
+  <div class="seccion-titulo">
+    <h2 id="t-fotos-informe">Tus fotos en el informe</h2>
+    <p>Aparecen en la sección «Fotos y predicciones». Elige una tanda y marca cuáles incluir (hasta 20).</p>
+  </div>
+  <label class="campo-select">Tanda de fotos<select id="lote"></select></label>
+  <div class="fotos-informe" id="fotos-informe"></div>
+  <p class="vacio" id="sin-fotos" hidden>Aún no has leído fotos. <a href="/">Sube tus fotos</a> para incluirlas aquí.</p>
+</section>
+
+<div class="barra-accion" id="barra-informe">
+  <span class="estado" id="estado-informe" role="status">Cuando estés listo, genera el PDF.</span>
+  <a class="boton" href="/descargar/codigo.zip" id="descargar-codigo" data-tarea="/api/tareas/codigo-zip" download>Descargar código (.zip)</a>
+  <button class="boton boton-primario" type="button" id="generar-pdf" data-tarea="/api/tareas/informe">Generar PDF</button>
+</div>
+
+<section class="tarjeta" id="vista-pdf" hidden aria-labelledby="t-vista">
+  <div class="seccion-titulo">
+    <h2 id="t-vista">Vista previa</h2>
+    <p>Si tu navegador no muestra el PDF aquí, usa el botón de descarga.</p>
+  </div>
+  <div class="acciones" style="margin-bottom: 14px"><a class="boton boton-verde" id="descargar-pdf" download="informe_digitos_manuscritos.pdf">Descargar PDF</a></div>
+  <iframe id="marco-pdf" title="Vista previa del informe en PDF" class="marco-pdf"></iframe>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/informe.js') }}"></script>
+{% endblock %}

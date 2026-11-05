@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block titulo %}Resultados de los modelos{% endblock %}
+
+{% block contenido %}
+<header class="encabezado-pagina">
+  <h1 style="font-size: clamp(2.1rem, 4.6vw, 3.5rem)">Resultados de los modelos</h1>
+  <p>Imágenes que comparan a los siete modelos con los 10 000 dígitos de prueba de MNIST. Elige una versión y pulsa <strong>Generar</strong> para crear o actualizar todas las imágenes; puedes descargarlas.</p>
+</header>
+
+<div class="tarjeta barra-controles barra-compacta">
+  <label class="campo-select">Versión de los modelos
+    <select id="version"></select>
+  </label>
+  <button class="boton boton-primario" type="button" id="generar" data-tarea="/api/tareas/graficos">Generar gráficos</button>
+  <a class="boton" id="descargar-todo" href="#" data-tarea="/api/tareas/graficos-zip" download>Descargar todas (.zip)</a>
+  <button class="boton boton-basura" type="button" id="abrir-basura" aria-expanded="false" aria-controls="panel-basura">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v6M14 11v6"/></svg>
+    Basura <span class="contador-basura" id="contador-basura" hidden></span>
+  </button>
+  <span class="estado" id="estado-graficos" role="status"></span>
+</div>
+
+<section class="tarjeta" id="panel-basura" hidden aria-labelledby="t-basura">
+  <div class="seccion-titulo">
+    <h2 id="t-basura">Basura de versiones</h2>
+    <p>Marca las versiones que ya no quieres ver y mándalas a la basura: desaparecen de las listas, pero puedes <strong>restaurarlas</strong> cuando quieras. La <strong>v1</strong> (la inicial) y la <strong>versión activa</strong> no se pueden quitar.</p>
+  </div>
+  <div class="dos-columnas">
+    <div>
+      <h3 style="margin-bottom: 10px">Versiones que tienes</h3>
+      <ul class="lista-versiones" id="lista-versiones-quitar"></ul>
+      <div class="acciones" style="margin-top: 14px">
+        <button class="boton boton-peligro" type="button" id="quitar-versiones" disabled>Mandar a la basura</button>
+        <span class="estado" id="estado-quitar"></span>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin-bottom: 10px">En la basura</h3>
+      <ul class="lista-versiones" id="lista-basura"></ul>
+      <p class="vacio" id="basura-vacia" hidden>La basura está vacía.</p>
+      <div class="acciones" style="margin-top: 14px"><button class="boton" type="button" id="vaciar-basura" hidden>Vaciar la basura</button></div>
+    </div>
+  </div>
+</section>
+
+<div id="vacio-graficos" class="tarjeta vacio" hidden>
+  <h2 style="font-size: 1.4rem; margin-bottom: 8px">Todavía no hay imágenes para esta versión</h2>
+  <p>Pulsa <strong>Generar gráficos</strong>: se evalúan los siete modelos con los 10 000 dígitos de prueba y se crean las imágenes (tarda unos 30 segundos).</p>
+</div>
+
+<div id="contenido-graficos" hidden>
+  <section class="tarjeta" aria-labelledby="t-metricas">
+    <div class="seccion-titulo">
+      <h2 id="t-metricas">Qué tan bien acierta cada modelo</h2>
+      <p>Exactitud, precisión, recall y F1 de cada modelo. Cuanto más largo el color, mejor.</p>
+    </div>
+    <figure class="imagen-grafico"><img id="img-metricas" alt="Cuatro gráficos de barras con la exactitud, precisión, recall y F1 de cada modelo"><figcaption><a class="descargar" id="dl-metricas" download>Descargar imagen</a></figcaption></figure>
+    <dl class="glosario" id="glosario"></dl>
+    <details class="tabla-detalle">
+      <summary>Ver como tabla</summary>
+      <div class="tabla-desplazable"><table class="tabla-informe" id="tabla-metricas"></table></div>
+    </details>
+  </section>
+
+  <section class="tarjeta" aria-labelledby="t-matriz">
+    <div class="seccion-titulo">
+      <h2 id="t-matriz">Matriz de confusión</h2>
+      <p>Cada fila es el dígito real y cada columna lo que respondió el modelo. La diagonal son los aciertos; lo demás son confusiones.</p>
+    </div>
+    <div class="chips" role="radiogroup" aria-label="Modelo" id="modelo-matriz"></div>
+    <figure class="imagen-grafico imagen-cuadrada"><img id="img-matriz" alt="Matriz de confusión del modelo elegido"><figcaption><a class="descargar" id="dl-matriz" download>Descargar imagen</a></figcaption></figure>
+    <p class="resumen-matriz" id="resumen-matriz"></p>
+    <div class="explorar-casilla">
+      <h3>Ver los dígitos de una casilla</h3>
+      <div class="barra-controles">
+        <label class="campo-select">Era el dígito<select id="casilla-real"></select></label>
+        <label class="campo-select">El modelo leyó<select id="casilla-predicho"></select></label>
+        <button class="boton" type="button" id="ver-casilla">Ver ejemplos</button>
+      </div>
+      <div id="galeria-casilla" class="galeria-casilla" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="tarjeta" aria-labelledby="t-predicciones">
+    <div class="seccion-titulo">
+      <h2 id="t-predicciones">Predicciones frente a la etiqueta real</h2>
+      <p>Dígitos de prueba de MNIST: a la izquierda el dígito real y lo que predijo el modelo, a la derecha la imagen. Un acierto de cada dígito y dos errores.</p>
+    </div>
+    <div class="chips" role="radiogroup" aria-label="Modelo de las predicciones" id="modelo-predicciones"></div>
+    <figure class="imagen-grafico"><img id="img-predicciones" alt="Dígitos de prueba con su etiqueta real y lo que predijo el modelo elegido"><figcaption><a class="descargar" id="dl-predicciones" download>Descargar imagen</a></figcaption></figure>
+    <p class="leyenda-predicciones" id="leyenda-predicciones"></p>
+  </section>
+
+  <section class="tarjeta" aria-labelledby="t-curvas">
+    <div class="seccion-titulo">
+      <h2 id="t-curvas">Cómo aprendieron las redes neuronales</h2>
+      <p>Época a época durante el entrenamiento inicial. La línea punteada usa dígitos que la red no vio en esa época.</p>
+    </div>
+    <figure class="imagen-grafico"><img id="img-curvas" alt="Exactitud y pérdida por época de la CNN y el MLP"><figcaption><a class="descargar" id="dl-curvas" download>Descargar imagen</a></figcaption></figure>
+  </section>
+
+  <section class="tarjeta" aria-labelledby="t-cv">
+    <div class="seccion-titulo">
+      <h2 id="t-cv">Validación cruzada de 5 pliegues</h2>
+      <p>Con los mejores hiperparámetros de cada modelo. Cada punto es un pliegue y el rombo marca el promedio; puntos juntos significan un modelo estable. Se usan 5 000 dígitos (y 2 épocas en las redes) para probar rápido, por eso los números son menores que los de la prueba final.</p>
+    </div>
+    <figure class="imagen-grafico"><img id="img-validacion" alt="Exactitud de cada pliegue de la validación cruzada por modelo"><figcaption><a class="descargar" id="dl-validacion" download>Descargar imagen</a></figcaption></figure>
+    <div id="detalle-cv" class="detalle-cv"></div>
+  </section>
+
+  <section class="tarjeta">
+    <details class="acordeon" id="acordeon-arquitectura">
+      <summary>
+        <span class="hamburguesa" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="acordeon-titulo">
+          <h2 id="t-arq">Arquitectura de cada modelo</h2>
+          <span>Capas, tamaño de cada salida, función de activación y parámetros que se aprenden.</span>
+        </span>
+        <span class="acordeon-estado" aria-hidden="true"></span>
+      </summary>
+      <div id="arquitecturas" class="arquitecturas"></div>
+    </details>
+  </section>
+
+  <section class="tarjeta" aria-labelledby="t-tiempos">
+    <div class="seccion-titulo">
+      <h2 id="t-tiempos">Velocidad</h2>
+      <p>Cuánto tarda cada modelo en responder y en entrenarse.</p>
+    </div>
+    <figure class="imagen-grafico"><img id="img-velocidad" alt="Milisegundos por dígito y segundos de entrenamiento de cada modelo"><figcaption><a class="descargar" id="dl-velocidad" download>Descargar imagen</a></figcaption></figure>
+  </section>
+
+  <section class="tarjeta" aria-labelledby="t-progreso">
+    <div class="seccion-titulo">
+      <h2 id="t-progreso">Progreso entre versiones</h2>
+      <p>Exactitud en MNIST de cada versión. Si una corrección hubiera hecho olvidar lo aprendido, aquí se vería una caída.</p>
+    </div>
+    <figure class="imagen-grafico"><img id="img-progreso" alt="Exactitud en MNIST de cada modelo por versión"><figcaption><a class="descargar" id="dl-progreso" download="progreso_versiones.png">Descargar imagen</a></figcaption></figure>
+  </section>
+
+  <section class="tarjeta" aria-labelledby="t-mapa">
+    <div class="seccion-titulo">
+      <h2 id="t-mapa">Dónde se equivoca cada modelo</h2>
+      <p>2 500 dígitos de prueba dibujados en 2 dimensiones (PCA): los parecidos quedan cerca. Los puntos de color son errores del modelo elegido.</p>
+    </div>
+    <div class="chips" role="radiogroup" aria-label="Modelo del mapa" id="modelo-mapa"></div>
+    <figure class="imagen-grafico"><img id="img-mapa" alt="Mapa de dígitos con los errores del modelo elegido"><figcaption><a class="descargar" id="dl-mapa" download>Descargar imagen</a></figcaption></figure>
+  </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/graficos.js') }}"></script>
+{% endblock %}

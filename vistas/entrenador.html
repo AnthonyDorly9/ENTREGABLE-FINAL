@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block titulo %}Entrenar modelos{% endblock %}
+
+{% block contenido %}
+<header class="encabezado-pagina">
+  <h1 style="font-size: clamp(2.1rem, 4.6vw, 3.5rem)">Entrenar modelos</h1>
+  <p>Elige un modelo, ajusta sus hiperparámetros y míralo aprender en vivo. Si el resultado te gusta, lo conviertes en una versión nueva sin perder tus correcciones.</p>
+</header>
+
+<section class="tarjeta" aria-labelledby="t-ajustes">
+  <div class="seccion-titulo">
+    <h2 id="t-ajustes">Ajustes</h2>
+    <p>Un hiperparámetro es una perilla que se elige antes de entrenar. Prueba distintos valores y compara.</p>
+  </div>
+  <div class="chips" role="radiogroup" aria-label="Modelo a entrenar" id="modelo-entrenador"></div>
+  <div class="ajustes" id="ajustes"></div>
+  <div class="acciones-correccion">
+    <button class="boton boton-verde" type="button" id="entrenar">Entrenar</button>
+    <button class="boton" type="button" id="validar">Validar (5 pliegues)</button>
+    <button class="boton" type="button" id="buscar">Buscar los mejores</button>
+    <span class="estado" id="estado-entrenador" role="status"></span>
+  </div>
+</section>
+
+<section class="tarjeta" id="zona-progreso" hidden aria-labelledby="t-progreso-ent">
+  <div class="seccion-titulo">
+    <h2 id="t-progreso-ent">En vivo</h2>
+    <p id="mensaje-progreso"></p>
+  </div>
+  <div class="barra-progreso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barra-progreso"><div class="relleno-progreso" id="relleno-progreso"></div></div>
+  <figure class="imagen-grafico" id="curvas-vivo" hidden style="margin-top: 18px"><img id="img-vivo" alt="Exactitud y pérdida por época durante este entrenamiento"></figure>
+  <div id="resultado-entrenador" style="margin-top: 18px" aria-live="polite"></div>
+</section>
+
+<section class="tarjeta" aria-labelledby="t-intentos">
+  <div class="seccion-titulo">
+    <h2 id="t-intentos">Tus intentos</h2>
+    <p>Cada entrenamiento queda guardado para comparar.</p>
+  </div>
+  <p class="vacio" id="sin-intentos">Todavía no has entrenado nada aquí.</p>
+  <div class="tabla-desplazable"><table class="tabla-informe" id="tabla-intentos" hidden></table></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/entrenador.js') }}"></script>
+{% endblock %}

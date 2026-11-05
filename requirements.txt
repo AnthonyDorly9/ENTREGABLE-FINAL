@@ -1,0 +1,11 @@
+Flask==3.0.3
+numpy==1.26.4
+scipy==1.13.1
+scikit-learn==1.5.2
+torch==2.14.0
+opencv-python==4.10.0.84
+pillow==12.3.0
+matplotlib==3.9.2
+pandas==2.2.3
+reportlab==4.2.5
+joblib==1.5.3

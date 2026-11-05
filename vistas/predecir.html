@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block titulo %}Leer formulario{% endblock %}
+
+{% block contenido %}
+<header class="encabezado-pagina">
+  <h1 style="font-size: clamp(2.1rem, 4.6vw, 3.5rem)">Leer formulario</h1>
+  <p>Sube la foto de un formulario con números escritos a mano: se separan los dígitos, se leen con los siete modelos y puedes corregir a los que fallen.</p>
+</header>
+
+<section class="tarjeta" aria-labelledby="titulo-subida">
+  <h2 id="titulo-subida" class="solo-lectores">Subir fotos</h2>
+  <div class="zona-subida" id="zona">
+    <strong style="font-size: 1.3rem">Suelta tus fotos aquí</strong>
+    <small>Hasta 20 fotos por tanda · JPG o PNG · un número por foto</small>
+    <div class="acciones">
+      <button class="boton boton-primario" type="button" id="elegir-fotos">Elegir fotos</button>
+      <button class="boton" type="button" id="usar-camara">Usar la cámara</button>
+    </div>
+    <input id="entrada-fotos" type="file" accept="image/*" multiple>
+    <input id="entrada-camara" type="file" accept="image/*" capture="environment">
+  </div>
+</section>
+
+<section id="seccion-pendientes" hidden aria-labelledby="titulo-pendientes">
+  <div class="seccion-titulo">
+    <h2 id="titulo-pendientes">Escribe el número de cada foto</h2>
+    <p>Escribe lo que dice la foto, por ejemplo <strong>123</strong>. Así sabremos qué modelos aciertan.</p>
+  </div>
+  <div class="fotos-cuadricula" id="fotos"></div>
+</section>
+
+<div class="barra-accion" id="barra-accion" hidden>
+  <span class="estado" id="estado-accion"></span>
+  <button class="boton boton-primario" type="button" id="predecir" data-tarea="/api/predecir">Predecir con todos los modelos</button>
+</div>
+
+<section id="resultados" hidden aria-labelledby="titulo-resultados">
+  <div class="seccion-titulo">
+    <h2 id="titulo-resultados">Resultados</h2>
+    <p id="resumen-resultados"></p>
+  </div>
+  <div class="tarjeta">
+    <h3 style="margin-bottom: 14px">Marcador</h3>
+    <div class="marcador" id="marcador"></div>
+  </div>
+  <section class="tarjeta galeria-real" aria-labelledby="t-galeria-real">
+    <details class="acordeon" id="acordeon-galeria-real">
+      <summary>
+        <span class="hamburguesa" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="acordeon-titulo">
+          <h3 id="t-galeria-real">Ver tus dígitos: real frente a predicho</h3>
+          <span id="resumen-galeria-real"></span>
+        </span>
+      </summary>
+      <div class="chips" role="radiogroup" aria-label="Modelo de la galería" id="modelo-galeria-real"></div>
+      <div class="tarjetas-real" id="tarjetas-real"></div>
+      <p class="leyenda-predicciones" id="leyenda-galeria-real"></p>
+      <a class="descargar" id="dl-galeria-real" download>Descargar imagen</a>
+    </details>
+  </section>
+  <div style="display: flex; flex-direction: column; gap: 18px; margin-top: 22px" id="lista-resultados"></div>
+  <div id="correccion"></div>
+</section>
+
+<dialog class="ventana-digito" id="ventana-digito" aria-labelledby="t-ventana-digito">
+  <div class="ventana-digito-cabecera">
+    <h2 id="t-ventana-digito"></h2>
+    <button class="boton" type="button" id="cerrar-ventana-digito">✕ Cerrar</button>
+  </div>
+  <div class="ventana-digito-cuerpo">
+    <img id="ventana-digito-foto" alt="">
+    <div>
+      <p class="ventana-digito-estado" id="ventana-digito-estado"></p>
+      <p class="ventana-digito-datos" id="ventana-digito-datos"></p>
+      <p class="ventana-digito-origen" id="ventana-digito-origen"></p>
+      <div class="ventana-digito-recorte"><span class="marco-digito"><img id="ventana-digito-recorte" alt=""></span><span>Así lo recibió el modelo (28×28)</span></div>
+      <div class="ventana-digito-pasar">
+        <button class="boton" type="button" id="digito-anterior">◀ Anterior</button>
+        <span id="ventana-digito-cuenta"></span>
+        <button class="boton" type="button" id="digito-siguiente">Siguiente ▶</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="velo" id="velo"></div>
+<aside class="panel-lateral" id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-titulo" aria-hidden="true">
+  <div class="panel-cabecera">
+    <div>
+      <h2 id="panel-titulo" style="font-size: 1.5rem"></h2>
+      <p id="panel-subtitulo" style="color: var(--tinta-suave)"></p>
+    </div>
+    <button class="boton boton-pequeno" type="button" id="cerrar-panel">Cerrar</button>
+  </div>
+  <div id="panel-cuerpo"></div>
+</aside>
+{% endblock %}
+
+{% block scripts %}
+<script>window.LOTE_INICIAL = {{ lote_inicial|tojson }};</script>
+<script src="{{ url_for('static', filename='js/correccion.js') }}"></script>
+<script src="{{ url_for('static', filename='js/predecir.js') }}"></script>
+{% endblock %}

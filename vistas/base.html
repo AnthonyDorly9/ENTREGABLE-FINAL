@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Lector de dígitos{% endblock %} · Trazo</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='imagenes/logo.svg') }}">
+  <script>try { var t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.tema = t; } catch (e) {}</script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/fuentes.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/trazo.css') }}">
+  {% block cabeza %}{% endblock %}
+</head>
+<body style="--acento: {{ acento }}">
+  <div class="aplicacion">
+    <header class="barra-superior barra-trazo">
+      <a class="marca-barra" href="/" aria-label="Trazo, inicio">
+        <img src="{{ url_for('static', filename='imagenes/logo.svg') }}" alt="" width="34" height="34">
+        <span class="marca-textos"><strong class="marca-nombre">Trazo</strong><small>Lector de dígitos · TecnoForms</small></span>
+      </a>
+      <nav class="nav-principal" id="menu" aria-label="Secciones">
+        <ul class="navegacion">
+          {% for clave, titulo, ruta, color in secciones %}
+          <li><a href="{{ ruta }}" style="--color: {{ color }}"{% if clave == activa %} aria-current="page"{% endif %}>{{ titulo }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="barra-derecha">
+        <div class="campana" id="campana" hidden>
+          <button class="boton-campana" id="boton-campana" type="button" aria-expanded="false" aria-controls="panel-tareas">
+            <span class="anillo-tareas" id="anillo-tareas" aria-hidden="true"></span>
+            <span class="texto-campana" id="texto-campana"></span>
+          </button>
+          <div class="panel-tareas" id="panel-tareas" role="region" aria-label="Tareas en marcha y terminadas" hidden></div>
+        </div>
+        <span class="insignia-version" title="Versión de los modelos que se están usando"><span>Modelos</span><strong>{{ version or "sin entrenar" }}</strong></span>
+        <button class="boton-icono" type="button" id="abrir-datos" title="Abrir la carpeta donde se guardan tus fotos y versiones: {{ carpeta_datos }}" aria-label="Abrir carpeta de datos">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </button>
+        <button class="boton-icono" type="button" id="cambiar-tema" aria-label="Cambiar tema" title="Cambiar tema"></button>
+        <span id="punto-tareas" hidden></span><div id="tareas-menu" hidden></div>
+      </div>
+    </header>
+
+    <main class="principal">
+      <div class="contenido">
+        {% block contenido %}{% endblock %}
+      </div>
+    </main>
+    <footer class="pie-trazo">Trazo · lector de dígitos manuscritos para formularios · basado en el proyecto Cifra, adaptado para el trabajo final PIAD-427</footer>
+  </div>
+  <div class="avisos" id="avisos" role="status" aria-live="polite"></div>
+  <script type="application/json" id="datos-modelos">{{ modelos_json|safe }}</script>
+  <script src="{{ url_for('static', filename='js/comun.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

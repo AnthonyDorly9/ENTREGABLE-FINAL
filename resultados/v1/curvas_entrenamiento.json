@@ -1,0 +1,87 @@
+{
+ "cnn": [
+  {
+   "epoca": 1,
+   "perdida": 0.32412459950049716,
+   "exactitud": 0.8978,
+   "segundos": 11.996345500010648,
+   "exactitud_val": 0.973
+  },
+  {
+   "epoca": 2,
+   "perdida": 0.10960698103904724,
+   "exactitud": 0.9657,
+   "segundos": 12.2405626999971,
+   "exactitud_val": 0.978
+  },
+  {
+   "epoca": 3,
+   "perdida": 0.08339996456205845,
+   "exactitud": 0.9738,
+   "segundos": 13.102662700010114,
+   "exactitud_val": 0.9825
+  }
+ ],
+ "mlp": [
+  {
+   "epoca": 1,
+   "perdida": 0.3745597728093465,
+   "exactitud": 0.8821666666666667,
+   "segundos": 0.9427854999958072,
+   "exactitud_val": 0.934
+  },
+  {
+   "epoca": 2,
+   "perdida": 0.18246547870834667,
+   "exactitud": 0.9438666666666666,
+   "segundos": 0.9827255999989575,
+   "exactitud_val": 0.941
+  },
+  {
+   "epoca": 3,
+   "perdida": 0.14697254509131114,
+   "exactitud": 0.9547666666666667,
+   "segundos": 0.9567303999938304,
+   "exactitud_val": 0.954
+  },
+  {
+   "epoca": 4,
+   "perdida": 0.1253597260872523,
+   "exactitud": 0.9599,
+   "segundos": 0.9294502999982797,
+   "exactitud_val": 0.953
+  },
+  {
+   "epoca": 5,
+   "perdida": 0.10878311988910039,
+   "exactitud": 0.9656,
+   "segundos": 1.0410591999971075,
+   "exactitud_val": 0.9515
+  },
+  {
+   "epoca": 6,
+   "perdida": 0.0961844969232877,
+   "exactitud": 0.9692,
+   "segundos": 0.9603041999944253,
+   "exactitud_val": 0.957
+  },
+  {
+   "epoca": 7,
+   "perdida": 0.08824527603586514,
+   "exactitud": 0.97,
+   "segundos": 0.9645239999954356,
+   "exactitud_val": 0.9605
+  },
+  {
+   "epoca": 8,
+   "perdida": 0.08063139723539352,
+   "exactitud": 0.9734,
+   "segundos": 0.9881471999979112,
+   "exactitud_val": 0.9595
+  }
+ ],
+ "svm": [],
+ "knn": [],
+ "regresion": [],
+ "kmeans": []
+}

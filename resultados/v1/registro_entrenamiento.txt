@@ -1,0 +1,59 @@
+﻿
+=== CNN (red convolucional) ===
+  CV {'filtros': 8, 'tasa_aprendizaje': 0.001} -> 0.8912 (+-0.0124) 15s
+  CV {'filtros': 8, 'tasa_aprendizaje': 0.003} -> 0.9280 (+-0.0096) 10s
+  CV {'filtros': 16, 'tasa_aprendizaje': 0.001} -> 0.8992 (+-0.0039) 19s
+  CV {'filtros': 16, 'tasa_aprendizaje': 0.003} -> 0.9416 (+-0.0065) 17s
+  mejores hiperparametros: {'filtros': 16, 'tasa_aprendizaje': 0.003}
+  epoca 1: perdida 0.3241 exactitud 0.8978 val 0.9730
+  epoca 2: perdida 0.1096 exactitud 0.9657 val 0.9780
+  epoca 3: perdida 0.0834 exactitud 0.9738 val 0.9825
+  prueba: exactitud 0.9869 F1 0.9868 entrenamiento 38s
+
+=== MLP (red densa) ===
+  CV {'neuronas': 64, 'tasa_aprendizaje': 0.001} -> 0.8662 (+-0.0168) 1s
+  CV {'neuronas': 64, 'tasa_aprendizaje': 0.003} -> 0.8966 (+-0.0101) 1s
+  CV {'neuronas': 128, 'tasa_aprendizaje': 0.001} -> 0.8862 (+-0.0084) 1s
+  CV {'neuronas': 128, 'tasa_aprendizaje': 0.003} -> 0.9014 (+-0.0123) 1s
+  mejores hiperparametros: {'neuronas': 128, 'tasa_aprendizaje': 0.003}
+  epoca 1: perdida 0.3746 exactitud 0.8822 val 0.9340
+  epoca 2: perdida 0.1825 exactitud 0.9439 val 0.9410
+  epoca 3: perdida 0.1470 exactitud 0.9548 val 0.9540
+  epoca 4: perdida 0.1254 exactitud 0.9599 val 0.9530
+  epoca 5: perdida 0.1088 exactitud 0.9656 val 0.9515
+  epoca 6: perdida 0.0962 exactitud 0.9692 val 0.9570
+  epoca 7: perdida 0.0882 exactitud 0.9700 val 0.9605
+  epoca 8: perdida 0.0806 exactitud 0.9734 val 0.9595
+  prueba: exactitud 0.9685 F1 0.9683 entrenamiento 8s
+
+=== SVM (RBF) ===
+  CV {'C': 1, 'gamma': 'scale'} -> 0.9548 (+-0.0042) 5s
+  CV {'C': 1, 'gamma': 0.05} -> 0.9592 (+-0.0070) 7s
+  CV {'C': 10, 'gamma': 'scale'} -> 0.9580 (+-0.0077) 4s
+  CV {'C': 10, 'gamma': 0.05} -> 0.9608 (+-0.0057) 8s
+  mejores hiperparametros: {'C': 10, 'gamma': 0.05}
+  prueba: exactitud 0.9739 F1 0.9738 entrenamiento 4s
+
+=== KNN ===
+  CV {'k': 1} -> 0.9376 (+-0.0048) 3s
+  CV {'k': 3} -> 0.9394 (+-0.0043) 1s
+  CV {'k': 5} -> 0.9398 (+-0.0034) 1s
+  CV {'k': 7} -> 0.9398 (+-0.0078) 1s
+  mejores hiperparametros: {'k': 7}
+  prueba: exactitud 0.9678 F1 0.9677 entrenamiento 0s
+
+=== Regresión logística ===
+  CV {'C': 0.1} -> 0.9034 (+-0.0093) 7s
+  CV {'C': 1.0} -> 0.8904 (+-0.0077) 8s
+  CV {'C': 10.0} -> 0.8834 (+-0.0097) 10s
+  mejores hiperparametros: {'C': 0.1}
+  prueba: exactitud 0.9233 F1 0.9222 entrenamiento 13s
+
+=== K-Means ===
+  CV {'clusteres': 10} -> 0.5961 (+-0.0187) 2s
+  CV {'clusteres': 30} -> 0.7529 (+-0.0168) 2s
+  CV {'clusteres': 60} -> 0.8140 (+-0.0154) 3s
+  mejores hiperparametros: {'clusteres': 60}
+  prueba: exactitud 0.8504 F1 0.8466 entrenamiento 6s
+
+Listo.

@@ -1,0 +1,80 @@
+{
+ "limpio": {
+  "dificultad": 0.1,
+  "probabilidad_digitos_pegados": 0.0,
+  "numeros": 150,
+  "digitos": 526,
+  "segmentacion_correcta_sin_ajuste": 0.9866666666666667,
+  "segmentacion_correcta_con_cantidad_conocida": 1.0,
+  "numero_completo_correcto": {
+   "cnn": 0.9133333333333333,
+   "mlp": 0.88,
+   "svm": 0.8733333333333333,
+   "knn": 0.86,
+   "regresion": 0.6533333333333333,
+   "regresion_lineal": 0.56,
+   "kmeans": 0.5866666666666667
+  },
+  "digito_correcto": {
+   "cnn": 0.9714828897338403,
+   "mlp": 0.9638783269961977,
+   "svm": 0.9581749049429658,
+   "knn": 0.9543726235741445,
+   "regresion": 0.8859315589353612,
+   "regresion_lineal": 0.8288973384030418,
+   "kmeans": 0.8517110266159695
+  }
+ },
+ "normal": {
+  "dificultad": 0.4,
+  "probabilidad_digitos_pegados": 0.1,
+  "numeros": 150,
+  "digitos": 540,
+  "segmentacion_correcta_sin_ajuste": 0.8933333333333333,
+  "segmentacion_correcta_con_cantidad_conocida": 1.0,
+  "numero_completo_correcto": {
+   "cnn": 0.92,
+   "mlp": 0.86,
+   "svm": 0.8533333333333334,
+   "knn": 0.8266666666666667,
+   "regresion": 0.6666666666666666,
+   "regresion_lineal": 0.5866666666666667,
+   "kmeans": 0.5333333333333333
+  },
+  "digito_correcto": {
+   "cnn": 0.9666666666666667,
+   "mlp": 0.9481481481481482,
+   "svm": 0.9462962962962963,
+   "knn": 0.9351851851851852,
+   "regresion": 0.8833333333333333,
+   "regresion_lineal": 0.825925925925926,
+   "kmeans": 0.8296296296296296
+  }
+ },
+ "dificil": {
+  "dificultad": 0.8,
+  "probabilidad_digitos_pegados": 0.25,
+  "numeros": 150,
+  "digitos": 533,
+  "segmentacion_correcta_sin_ajuste": 0.7933333333333333,
+  "segmentacion_correcta_con_cantidad_conocida": 1.0,
+  "numero_completo_correcto": {
+   "cnn": 0.88,
+   "mlp": 0.8133333333333334,
+   "svm": 0.82,
+   "knn": 0.8066666666666666,
+   "regresion": 0.68,
+   "regresion_lineal": 0.5466666666666666,
+   "kmeans": 0.5133333333333333
+  },
+  "digito_correcto": {
+   "cnn": 0.9343339587242027,
+   "mlp": 0.9043151969981238,
+   "svm": 0.9080675422138836,
+   "knn": 0.9118198874296435,
+   "regresion": 0.8555347091932458,
+   "regresion_lineal": 0.8030018761726079,
+   "kmeans": 0.7842401500938087
+  }
+ }
+}

@@ -1,0 +1,418 @@
+{
+ "cnn": [
+  {
+   "parametros": {
+    "filtros": 16,
+    "tasa_aprendizaje": 0.003
+   },
+   "exactitud_media": 0.941611988011988,
+   "desviacion": 0.006465463108808502,
+   "exactitud_por_pliegue": [
+    0.9400599400599401,
+    0.942,
+    0.94,
+    0.953,
+    0.933
+   ],
+   "segundos": 17.256868600001326
+  },
+  {
+   "parametros": {
+    "filtros": 8,
+    "tasa_aprendizaje": 0.003
+   },
+   "exactitud_media": 0.9280147852147852,
+   "desviacion": 0.00963025095992642,
+   "exactitud_por_pliegue": [
+    0.926073926073926,
+    0.93,
+    0.912,
+    0.942,
+    0.93
+   ],
+   "segundos": 10.415518399997381
+  },
+  {
+   "parametros": {
+    "filtros": 16,
+    "tasa_aprendizaje": 0.001
+   },
+   "exactitud_media": 0.8992209790209792,
+   "desviacion": 0.0038968624175176156,
+   "exactitud_por_pliegue": [
+    0.8951048951048951,
+    0.901,
+    0.894,
+    0.903,
+    0.903
+   ],
+   "segundos": 18.61449910000374
+  },
+  {
+   "parametros": {
+    "filtros": 8,
+    "tasa_aprendizaje": 0.001
+   },
+   "exactitud_media": 0.8912231768231769,
+   "desviacion": 0.012402757854879865,
+   "exactitud_por_pliegue": [
+    0.8841158841158842,
+    0.9,
+    0.87,
+    0.901,
+    0.901
+   ],
+   "segundos": 15.343832499987911
+  }
+ ],
+ "mlp": [
+  {
+   "parametros": {
+    "neuronas": 128,
+    "tasa_aprendizaje": 0.003
+   },
+   "exactitud_media": 0.9014207792207791,
+   "desviacion": 0.012297044828724077,
+   "exactitud_por_pliegue": [
+    0.8961038961038961,
+    0.91,
+    0.883,
+    0.919,
+    0.899
+   ],
+   "segundos": 1.3687216999969678
+  },
+  {
+   "parametros": {
+    "neuronas": 64,
+    "tasa_aprendizaje": 0.003
+   },
+   "exactitud_media": 0.8966225774225774,
+   "desviacion": 0.010129587970226355,
+   "exactitud_por_pliegue": [
+    0.8871128871128872,
+    0.901,
+    0.885,
+    0.913,
+    0.897
+   ],
+   "segundos": 1.073333399996045
+  },
+  {
+   "parametros": {
+    "neuronas": 128,
+    "tasa_aprendizaje": 0.001
+   },
+   "exactitud_media": 0.886223976023976,
+   "desviacion": 0.008430005735561534,
+   "exactitud_por_pliegue": [
+    0.8801198801198801,
+    0.902,
+    0.885,
+    0.886,
+    0.878
+   ],
+   "segundos": 1.3682846999872709
+  },
+  {
+   "parametros": {
+    "neuronas": 64,
+    "tasa_aprendizaje": 0.001
+   },
+   "exactitud_media": 0.866227972027972,
+   "desviacion": 0.0167635400972033,
+   "exactitud_por_pliegue": [
+    0.8601398601398601,
+    0.875,
+    0.837,
+    0.873,
+    0.886
+   ],
+   "segundos": 1.2862117000040598
+  }
+ ],
+ "svm": [
+  {
+   "parametros": {
+    "C": 10,
+    "gamma": 0.05
+   },
+   "exactitud_media": 0.960808791208791,
+   "desviacion": 0.005733752134249642,
+   "exactitud_por_pliegue": [
+    0.9560439560439561,
+    0.958,
+    0.958,
+    0.972,
+    0.96
+   ],
+   "segundos": 7.550674400001299
+  },
+  {
+   "parametros": {
+    "C": 1,
+    "gamma": 0.05
+   },
+   "exactitud_media": 0.9592101898101898,
+   "desviacion": 0.007039356732049798,
+   "exactitud_por_pliegue": [
+    0.949050949050949,
+    0.96,
+    0.959,
+    0.971,
+    0.957
+   ],
+   "segundos": 7.311559299996588
+  },
+  {
+   "parametros": {
+    "C": 10,
+    "gamma": "scale"
+   },
+   "exactitud_media": 0.9580079920079921,
+   "desviacion": 0.007670216654093622,
+   "exactitud_por_pliegue": [
+    0.9600399600399601,
+    0.951,
+    0.955,
+    0.972,
+    0.952
+   ],
+   "segundos": 4.452462599991122
+  },
+  {
+   "parametros": {
+    "C": 1,
+    "gamma": "scale"
+   },
+   "exactitud_media": 0.9548095904095903,
+   "desviacion": 0.004160127595413172,
+   "exactitud_por_pliegue": [
+    0.952047952047952,
+    0.949,
+    0.959,
+    0.96,
+    0.954
+   ],
+   "segundos": 4.889735300006578
+  }
+ ],
+ "knn": [
+  {
+   "parametros": {
+    "k": 7
+   },
+   "exactitud_media": 0.9398133866133866,
+   "desviacion": 0.007847207074087786,
+   "exactitud_por_pliegue": [
+    0.9330669330669331,
+    0.937,
+    0.939,
+    0.955,
+    0.935
+   ],
+   "segundos": 1.1411766999954125
+  },
+  {
+   "parametros": {
+    "k": 5
+   },
+   "exactitud_media": 0.9398123876123876,
+   "desviacion": 0.0033639290133959544,
+   "exactitud_por_pliegue": [
+    0.938061938061938,
+    0.94,
+    0.939,
+    0.946,
+    0.936
+   ],
+   "segundos": 1.1287247000000207
+  },
+  {
+   "parametros": {
+    "k": 3
+   },
+   "exactitud_media": 0.9394123876123877,
+   "desviacion": 0.004266840575540305,
+   "exactitud_por_pliegue": [
+    0.938061938061938,
+    0.94,
+    0.938,
+    0.947,
+    0.934
+   ],
+   "segundos": 1.0732736999925692
+  },
+  {
+   "parametros": {
+    "k": 1
+   },
+   "exactitud_media": 0.937613986013986,
+   "desviacion": 0.004819563779198397,
+   "exactitud_por_pliegue": [
+    0.9300699300699301,
+    0.936,
+    0.945,
+    0.938,
+    0.939
+   ],
+   "segundos": 2.6334793000132777
+  }
+ ],
+ "regresion": [
+  {
+   "parametros": {
+    "C": 0.1
+   },
+   "exactitud_media": 0.9034191808191808,
+   "desviacion": 0.00933083536444165,
+   "exactitud_por_pliegue": [
+    0.9040959040959041,
+    0.904,
+    0.895,
+    0.92,
+    0.894
+   ],
+   "segundos": 7.093930999995791
+  },
+  {
+   "parametros": {
+    "C": 1.0
+   },
+   "exactitud_media": 0.8904221778221778,
+   "desviacion": 0.007731744274165334,
+   "exactitud_por_pliegue": [
+    0.8891108891108891,
+    0.887,
+    0.882,
+    0.905,
+    0.889
+   ],
+   "segundos": 7.935848699999042
+  },
+  {
+   "parametros": {
+    "C": 10.0
+   },
+   "exactitud_media": 0.8834247752247754,
+   "desviacion": 0.00968895153875679,
+   "exactitud_por_pliegue": [
+    0.8761238761238761,
+    0.88,
+    0.874,
+    0.901,
+    0.886
+   ],
+   "segundos": 10.49433620000491
+  }
+ ],
+ "kmeans": [
+  {
+   "parametros": {
+    "clusteres": 60
+   },
+   "exactitud_media": 0.8140423576423578,
+   "desviacion": 0.015355929775720747,
+   "exactitud_por_pliegue": [
+    0.7882117882117882,
+    0.819,
+    0.815,
+    0.812,
+    0.836
+   ],
+   "segundos": 2.7129727999999886
+  },
+  {
+   "parametros": {
+    "clusteres": 30
+   },
+   "exactitud_media": 0.7528515484515484,
+   "desviacion": 0.01682430332637825,
+   "exactitud_por_pliegue": [
+    0.7422577422577422,
+    0.774,
+    0.762,
+    0.726,
+    0.76
+   ],
+   "segundos": 2.493968800001312
+  },
+  {
+   "parametros": {
+    "clusteres": 10
+   },
+   "exactitud_media": 0.596087912087912,
+   "desviacion": 0.01865747152781249,
+   "exactitud_por_pliegue": [
+    0.5604395604395604,
+    0.597,
+    0.611,
+    0.601,
+    0.611
+   ],
+   "segundos": 2.2436600000073668
+  }
+ ],
+ "regresion_lineal": [
+  {
+   "parametros": {
+    "alpha": 100.0
+   },
+   "exactitud_media": 0.8568303696303697,
+   "desviacion": 0.006452068177204076,
+   "exactitud_por_pliegue": [
+    0.8481518481518482,
+    0.86,
+    0.851,
+    0.866,
+    0.859
+   ],
+   "segundos": 0.6436072999931639
+  },
+  {
+   "parametros": {
+    "alpha": 10.0
+   },
+   "exactitud_media": 0.8430307692307693,
+   "desviacion": 0.004710456704701145,
+   "exactitud_por_pliegue": [
+    0.8461538461538461,
+    0.845,
+    0.834,
+    0.843,
+    0.847
+   ],
+   "segundos": 0.6462631999893347
+  },
+  {
+   "parametros": {
+    "alpha": 1.0
+   },
+   "exactitud_media": 0.827232967032967,
+   "desviacion": 0.00766019797494403,
+   "exactitud_por_pliegue": [
+    0.8351648351648352,
+    0.822,
+    0.816,
+    0.827,
+    0.836
+   ],
+   "segundos": 0.6601433000032557
+  },
+  {
+   "parametros": {
+    "alpha": 0.1
+   },
+   "exactitud_media": 0.8216331668331668,
+   "desviacion": 0.009373736587819497,
+   "exactitud_por_pliegue": [
+    0.8341658341658341,
+    0.811,
+    0.811,
+    0.823,
+    0.829
+   ],
+   "segundos": 0.6469020999938948
+  }
+ ]
+}
